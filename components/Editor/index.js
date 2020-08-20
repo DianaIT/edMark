@@ -1,12 +1,14 @@
 import { Container, EditorComponent, TextArea } from "./style"
 import { useState, useEffect } from "react"
+import showdown from "showdown"
 
 export default function Editor() {
   const [text, setText] = useState()
   const [preview, setPreview] = useState()
 
   useEffect(() => {
-    setPreview(text)
+    const textFormat = new showdown.Converter().makeHtml(text)
+    setPreview(textFormat)
   }, [text])
 
   const updatePreview = (evt) => {
@@ -17,7 +19,9 @@ export default function Editor() {
       <EditorComponent>
         <TextArea onChange={updatePreview}></TextArea>
       </EditorComponent>
-      <EditorComponent>{preview}</EditorComponent>
+      <EditorComponent
+        dangerouslySetInnerHTML={{ __html: preview }}
+      ></EditorComponent>
     </Container>
   )
 }
