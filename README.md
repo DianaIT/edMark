@@ -19,3 +19,7 @@ You can look out here 👇
 ## [Edmark](edmark.vercel.app)
 
 ⌨️ with ❤️ by Diana
+
+## 🔗 Links
+
+- [Showdown library](https://github.com/showdownjs/showdown)

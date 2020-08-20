@@ -2,14 +2,20 @@ import { Button } from "./style"
 import GitHub from "../../components/GitHub"
 import { loginWithGitHub } from "../../firebase/client"
 import useUser from "../../hooks/useUser"
+import { useRouter } from "next/router"
 
 export default function Login() {
   const user = useUser()
+  const router = useRouter()
 
   const handleLogin = () => {
-    loginWithGitHub().catch((err) => {
-      console.log(err)
-    })
+    loginWithGitHub()
+      .then(() => {
+        router.push("./edmark")
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   return (
