@@ -1,10 +1,5 @@
 import styled from "styled-components"
 
-export const Container = styled.section`
-  display: flex;
-  flex-direction: column;
-`
-
 export const Title = styled.h1`
   border-bottom: 1px solid lightgray;
   letter-spacing: 10px;
@@ -28,6 +23,7 @@ export const Cursor = styled.span`
   color: grey;
   position: absolute;
   left: -7px;
+  top: -1px;
 
   -webkit-animation-name: parpadeo;
   -webkit-animation-duration: 1.5s;

@@ -1,20 +1,19 @@
 import { Button } from "./style"
 import GitHub from "../../components/GitHub"
-/* import GitHub from "../../components/Github"
-import { loginWithGitHub } from "../../firebase/client" */
-/* import { useEffect } from "react"
-import useUser from "../../hooks/useUser" */
-/* import { useRouter } from "next/router" */
+import { loginWithGitHub } from "../../firebase/client"
+import { useEffect } from "react"
+import useUser from "../../hooks/useUser"
+import { useRouter } from "next/router"
 
 export default function Login() {
-  /*   const user = useUser() */
-  /*   const router = useRouter() */
-  /* 
+  const user = useUser()
+  const router = useRouter()
+
   useEffect(() => {
     user && router.replace("/")
-  }, [user]) */
+  }, [user])
 
-  /*   const handleLogin = () => {
+  const handleLogin = () => {
     loginWithGitHub()
       .then((user) => {
         router.push("/edmark")
@@ -22,11 +21,10 @@ export default function Login() {
       .catch((err) => {
         console.log(err)
       })
-  } */
+  }
 
-  /*   onClick = { handleLogin } */
   return (
-    <Button>
+    <Button onClick={handleLogin}>
       <GitHub />
       &nbsp; Login
     </Button>
