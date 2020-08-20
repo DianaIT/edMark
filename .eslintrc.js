@@ -1,3 +1,8 @@
+const RULES = {
+  OFF: "off",
+  ERROR: "error",
+  WARN: "warning",
+}
 module.exports = {
   env: {
     browser: true,
@@ -13,5 +18,7 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
-  rules: {},
+  rules: {
+    "react/react-in-jsx-scope": RULES.OFF,
+  },
 }
