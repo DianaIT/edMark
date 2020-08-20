@@ -3,7 +3,6 @@
 .eslintrc.js
 .prettierignore
 .prettierrc.json
-/firebase/config.js
 
 # dependencies
 /node_modules

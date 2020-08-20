@@ -14,10 +14,6 @@ Hi there! This is my own markdown editor. I want to updated my blog through this
 
 📫 Ideas & suggestions are welcome.
 
-You can look out here 👇
-
-## [Edmark](edmark.vercel.app)
-
 ⌨️ with ❤️ by Diana
 
 ## 🔗 Links
