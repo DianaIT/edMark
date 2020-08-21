@@ -9,6 +9,7 @@ export default function Login() {
   const handleLogin = () => {
     loginWithGitHub()
       .then((user) => {
+        console.log(user)
         router.push("./edmark")
       })
       .catch((err) => {
