@@ -6,6 +6,7 @@ export const TitleLogo = styled.h1`
   font-size: 3rem;
   margin-bottom: 0;
   margin-left: 15px;
+  font-family: NunitoSans;
 `
 
 export const SubTitle = styled.h2`
@@ -13,6 +14,7 @@ export const SubTitle = styled.h2`
   position: relative;
   margin-left: 15px;
   margin-top: -1px;
+  font-family: Incosolata;
 `
 
 export const Cursor = styled.span`

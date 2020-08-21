@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useEffect, useContext } from "react"
 import { onAuthStateChanged } from "firebase/client"
 import { useRouter } from "next/router"
+import Context from "context"
 
 export const USER_STATES = {
   NOT_LOGGED: null,
@@ -8,7 +9,7 @@ export const USER_STATES = {
 }
 
 export default function useUser() {
-  const [user, setUser] = useState(USER_STATES.NOT_KNOWN)
+  const { user, setUser } = useContext(Context)
   const router = useRouter()
 
   useEffect(() => {
@@ -19,5 +20,5 @@ export default function useUser() {
     user === USER_STATES.NOT_LOGGED && router.push("/")
   }, [user])
 
-  return user
+  return { user, setUser }
 }

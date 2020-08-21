@@ -22,6 +22,7 @@ export default function Editor() {
   return (
     <>
       <button onClick={changeView}> CHANGE VIEW </button>
+
       <Container>
         <EditorComponent>
           <TextArea onChange={updatePreview}></TextArea>

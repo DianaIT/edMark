@@ -1,8 +1,10 @@
 import { Header, Avatar, Title } from "./style"
-import useUser from "hooks/useUser"
 import { logOut } from "firebase/client"
+import useUser from "hooks/useUser"
+
 export default function UserHeader() {
-  const user = useUser()
+  const { user } = useUser()
+  console.log(user)
 
   const handleLogOut = () => {
     logOut()

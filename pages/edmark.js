@@ -1,10 +1,13 @@
 import Editor from "components/Editor"
 import UserHeader from "components/UserHeader"
+import { UserContextProvider } from "context"
 
 export default function Edmark() {
   return (
     <>
-      <UserHeader />
+      <UserContextProvider>
+        <UserHeader />
+      </UserContextProvider>
       <Editor />
     </>
   )
