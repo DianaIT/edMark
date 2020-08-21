@@ -14,6 +14,9 @@ export const EditorComponent = styled.section`
   height: 95vh;
   padding: 2rem;
   font-size: 1.4rem;
+  position: relative;
+  overflow: hidden;
+
   box-shadow: 5px 5px 5px rgba(123, 123, 123, 0.6);
 `
 
@@ -24,4 +27,13 @@ export const TextArea = styled.textarea`
   outline: none;
   border: none;
   font-size: 1.4rem;
+`
+export const Badget = styled.span`
+  background-color: orangered;
+  color: white;
+  position: absolute;
+  padding: 0.3rem 6rem;
+  transform: rotate(30deg);
+  right: -5.5rem;
+  top: 1.5rem;
 `

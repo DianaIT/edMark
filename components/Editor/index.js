@@ -1,4 +1,4 @@
-import { Container, EditorComponent, TextArea } from "./style"
+import { Container, EditorComponent, TextArea, Badget } from "./style"
 import { useState, useEffect } from "react"
 import showdown from "showdown"
 
@@ -27,9 +27,10 @@ export default function Editor() {
           <TextArea onChange={updatePreview}></TextArea>
         </EditorComponent>
         {dual === true && (
-          <EditorComponent
-            dangerouslySetInnerHTML={{ __html: preview }}
-          ></EditorComponent>
+          <EditorComponent>
+            <Badget> PREVIEW </Badget>
+            <div dangerouslySetInnerHTML={{ __html: preview }}></div>
+          </EditorComponent>
         )}
       </Container>
     </>
