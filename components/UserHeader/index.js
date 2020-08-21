@@ -5,7 +5,6 @@ export default function UserHeader() {
   const user = useUser()
 
   const handleLogOut = () => {
-    console.log("cerrar sesión")
     logOut()
   }
 
