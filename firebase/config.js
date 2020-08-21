@@ -1,6 +1,6 @@
 export const firebaseConfig = {
   apiKey: "AIzaSyDPynLol0aOcPnTWOVF8m-ns2jTHhhuQ2E",
-  authDomain: "https://edmark.vercel.app/",
+  authDomain: "edmark-649ec.firebaseapp.com",
   databaseURL: "https://edmark-649ec.firebaseio.com",
   projectId: "edmark-649ec",
   storageBucket: "edmark-649ec.appspot.com",
