@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Title = styled.h1`
+export const TitleLogo = styled.h1`
   border-bottom: 1px solid lightgray;
   letter-spacing: 10px;
   font-size: 3rem;
@@ -22,8 +22,7 @@ export const Cursor = styled.span`
   animation-iteration-count: infinite;
   color: grey;
   position: absolute;
-  left: -7px;
-  top: -1px;
+  left: -12px;
 
   -webkit-animation-name: parpadeo;
   -webkit-animation-duration: 1.5s;

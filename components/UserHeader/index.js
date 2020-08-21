@@ -1,19 +1,30 @@
 import { Header, Avatar, Title } from "./style"
-import useUser from "../../hooks/useUser"
-import { logOut } from "../../firebase/client"
+import useUser from "hooks/useUser"
+import { logOut } from "firebase/client"
 export default function UserHeader() {
   const user = useUser()
 
   const handleLogOut = () => {
+    console.log("cerrar sesión")
     logOut()
-      .then(() => console.log("Sesión cerrada"))
-      .catch((error) => console.log(error))
   }
 
   return (
     <Header>
       <Title>EDMARK</Title>
-      {user && <Avatar src={user.avatar} onclick={handleLogOut}></Avatar>}
+      {user && (
+        <>
+          <section>
+            <span>
+              <span role="img" aria-label="hi there!">
+                👋🏻
+              </span>{" "}
+              Hi there, {user.username.split(" ")[0]}
+            </span>
+            <Avatar src={user.avatar} onClick={handleLogOut}></Avatar>
+          </section>
+        </>
+      )}
     </Header>
   )
 }

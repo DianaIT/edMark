@@ -1,9 +1,9 @@
-import { Title, SubTitle, Cursor } from "./style"
+import { TitleLogo, SubTitle, Cursor } from "./style"
 
 export default function Logo() {
   return (
     <>
-      <Title>EDMARK</Title>
+      <TitleLogo>EDMARK</TitleLogo>
       <SubTitle>
         <Cursor> | </Cursor>
         your markdown editor

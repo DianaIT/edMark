@@ -1,5 +1,6 @@
-import Editor from "../components/Editor"
-import UserHeader from "../components/UserHeader"
+import Editor from "components/Editor"
+import UserHeader from "components/UserHeader"
+
 export default function Edmark() {
   return (
     <>
